@@ -1,0 +1,90 @@
+.theme-toggle {
+    /*float: left;*/
+    position: absolute;
+    top: 18px;
+    right: 1vw;
+    width: 50px;
+    margin: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.theme-toggle-text {
+    vertical-align: top;
+    padding: 15px 0px 0px 15px;
+    float: left;
+}
+
+.theme-toggle-checkbox {
+    display: none;
+}
+
+.theme-toggle-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.1s ease-in 0s;
+}
+
+.theme-toggle-inner:before, .theme-toggle-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 20px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.theme-toggle-inner:before {
+    content: url("../img/sun.png");
+    padding-left: 8px;
+    background-color: #E88E3D;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.theme-toggle-inner:after {
+    content: url("../img/moon.png");
+    padding-right: 3px;
+    background-color: #313131;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+
+.theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-inner {
+    margin-left: 0;
+}
+
+.theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-switch {
+    right: 0px;
+}
+
+.theme-toggle-switch {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.1s ease-in 0s;
+}
+
+.theme-toggle-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+}
